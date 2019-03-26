@@ -1,10 +1,13 @@
 for (let currentNumber = 1; currentNumber <= 100; currentNumber++) {
-    // Divide the current number by 2, and check if the remainder is 0
+    let message = ""
     if (currentNumber % 5 === 0) {
-        console.log(currentNumber, "chicken") // Only 2, 4, 6 will appear
-    } else if (currentNumber % 7 === 0) {
-        console.log(currentNumber, "monkey") // Only 2, 4, 6 will appear
+        message += "chicken";
     }
+    if (currentNumber % 7 === 0) {
+        message += "monkey";
+    }
+    console.log(currentNumber, message);
+    message = "";
 }
 
 let bandNumber = 0
@@ -18,7 +21,7 @@ const scum = takeNumber("Galactic Scum");
 console.log(scum); // This should print "1. Galactic Scum" in the console
 
 const under = takeNumber("Underdogs");
-console.log(under);  // This should print "2. Underdogs" in the console
+console.log(under); // This should print "2. Underdogs" in the console
 
 const toxic = takeNumber("Toxic Megacolon");
 console.log(toxic);
